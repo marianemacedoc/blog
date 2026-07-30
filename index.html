@@ -1,42 +1,109 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Padaria Digital</title>
-    <style>
-        header {
-            background-color: #F6F080;
-            color: #000000;
+<!DOCTYPE html> 
+<html lang="pt-br"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Glow & Style - Loja de Maquiagem</title> 
+    <style> 
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FAF4F6;
+        }
+        header { 
+            background-color: #F8C8DC; /* Tom rosa suave */
+            color: #333333; 
+            text-align: center; 
+            margin: 0 auto; 
+            padding: 24px 16px; 
+            border-bottom: 2px solid #E6A5C0;
+        } 
+        main { 
+            background-color: #FFFFFF; 
+            color: #333333; 
+            max-width: 900px; 
+            margin: 20px auto; 
+            padding: 24px; 
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        } 
+        .logo { 
+            width: 100px; 
+            height: 100px; 
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 12px;
+        } 
+        .produtos {
+            display: flex;
+            gap: 16px;
+            justify-content: space-around;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .card-produto {
+            background-color: #FAF4F6;
+            border: 1px solid #F0D0DF;
+            border-radius: 8px;
+            padding: 16px;
             text-align: center;
-            max-height: 800px;
-            margin: 0 auto;
-            padding: 16px;
+            width: 200px;
         }
-        main {
-            background-color: #000000;
-            color: #F6F080;
-            max-height: 800px;
-            margin: 0 auto;
-            padding: 16px;
+        .card-produto img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 4px;
         }
-        img {
-            width: 80px;
-            height: 80px;
+        button {
+            background-color: #D87093;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 8px;
+            font-weight: bold;
         }
-    </style>
-</head>
-<body>
+        button:hover {
+            background-color: #C71585;
+        }
+    </style> 
+</head> 
+<body> 
+    <header> 
+        <h1>Glow & Style Beauty</h1> 
+        <h3>Realce sua beleza natural com nossos produtos incríveis</h3> 
+    </header> 
+    <main> 
+        <div style="text-align: center;">
+            <img src="logo_maquiagem.png" alt="Logotipo da Glow & Style Beauty" class="logo">
+            <h2>Destaques da Semana</h2>
+        </div>
 
-    <header>
-        <h1>Padaria - Doce Sabor.</h1>
-        <h3>Sabores maravilhosos para todos os gostos. 🥮🧁🍰</h3>
-    </header>
+        <section class="produtos">
+            <div class="card-produto">
+                <img src="batom.png" alt="Batom Matte Red">
+                <h4>Batom Matte</h4>
+                <p>R$ 29,90</p>
+                <button>Comprar</button>
+            </div>
 
-    <main>
-        <!-- Imagem corrigida com o fechamento da tag alt e da tag img -->
-        <img src="padaria_imagem.png" alt="Logotipo da Padaria Doce Sabor">
-    </main>
+            <div class="card-produto">
+                <img src="base.png" alt="Base Líquida Glow">
+                <h4>Base Líquida</h4>
+                <p>R$ 59,90</p>
+                <button>Comprar</button>
+            </div>
 
-</body>
+            <div class="card-produto">
+                <img src="paleta.png" alt="Paleta de Sombras">
+                <h4>Paleta de Sombras</h4>
+                <p>R$ 79,90</p>
+                <button>Comprar</button>
+            </div>
+        </section>
+    </main> 
+</body> 
 </html>
