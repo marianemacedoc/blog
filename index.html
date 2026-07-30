@@ -1,109 +1,402 @@
-<!DOCTYPE html> 
-<html lang="pt-br"> 
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Glow & Style - Loja de Maquiagem</title> 
-    <style> 
-        body {
-            font-family: Arial, sans-serif;
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vortex - Moda Unissex</title>
+    <style>
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            background-color: #FAF4F6;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        header { 
-            background-color: #F8C8DC; /* Tom rosa suave */
-            color: #333333; 
-            text-align: center; 
-            margin: 0 auto; 
-            padding: 24px 16px; 
-            border-bottom: 2px solid #E6A5C0;
-        } 
-        main { 
-            background-color: #FFFFFF; 
-            color: #333333; 
-            max-width: 900px; 
-            margin: 20px auto; 
-            padding: 24px; 
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        } 
-        .logo { 
-            width: 100px; 
-            height: 100px; 
-            object-fit: cover;
-            border-radius: 50%;
-            margin-bottom: 12px;
-        } 
-        .produtos {
-            display: flex;
-            gap: 16px;
-            justify-content: space-around;
-            margin-top: 20px;
-            flex-wrap: wrap;
+
+        body {
+            background-color: #121212;
+            color: #F6F080;
         }
-        .card-produto {
-            background-color: #FAF4F6;
-            border: 1px solid #F0D0DF;
-            border-radius: 8px;
-            padding: 16px;
+
+        /* --- HEADER E NAVEGAÇÃO --- */
+        header {
+            background-color: #F6F080;
+            color: #000000;
             text-align: center;
-            width: 200px;
+            padding: 24px 16px;
         }
-        .card-produto img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 4px;
+
+        header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
-        button {
-            background-color: #D87093;
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 4px;
-            cursor: pointer;
+
+        header h3 {
+            font-size: 1.1rem;
+            font-weight: 400;
             margin-top: 8px;
+        }
+
+        nav {
+            background-color: #1f1f1f;
+            padding: 12px;
+            text-align: center;
+            border-bottom: 2px solid #F6F080;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: #F6F080;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        /* --- ESTRUTURA PRINCIPAL --- */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 32px 16px;
+        }
+
+        /* --- HERO BANNER --- */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 32px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .hero-text {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .hero-text h2 {
+            font-size: 2rem;
+            margin-bottom: 12px;
+            color: #ffffff;
+        }
+
+        .hero-text p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #cccccc;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #F6F080;
+            color: #000000;
+            padding: 12px 24px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 4px;
+            text-transform: uppercase;
+            transition: transform 0.2s, background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        .hero-img {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+            border-radius: 50%;
+            background-color: #F6F080;
+            padding: 10px;
+        }
+
+        /* --- SEÇÕES DE CONTEÚDO --- */
+        .section-title {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+
+        /* --- CATÁLOGO DE PRODUTOS --- */
+        .grid-produtos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+
+        .card-produto {
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: border-color 0.3s;
+        }
+
+        .card-produto:hover {
+            border-color: #F6F080;
+        }
+
+        .card-produto img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            margin: 0 auto 16px auto;
+        }
+
+        .card-produto h4 {
+            font-size: 1.2rem;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .card-produto p {
+            font-size: 0.9rem;
+            color: #aaaaaa;
+            margin-bottom: 12px;
+        }
+
+        .preco {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #F6F080;
+            margin-bottom: 16px;
+        }
+
+        /* --- SOBRE A MODA UNISSEX --- */
+        .info-box {
+            background-color: #1a1a1a;
+            border-left: 4px solid #F6F080;
+            padding: 24px;
+            margin-bottom: 48px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .info-box h3 {
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+
+        .info-box p {
+            color: #cccccc;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .tamanhos-list {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .tamanho-badge {
+            background-color: #333;
+            color: #F6F080;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 0.85rem;
             font-weight: bold;
         }
-        button:hover {
-            background-color: #C71585;
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #000000;
+            color: #888888;
+            padding: 40px 16px 20px 16px;
+            border-top: 1px solid #333;
         }
-    </style> 
-</head> 
-<body> 
-    <header> 
-        <h1>Glow & Style Beauty</h1> 
-        <h3>Realce sua beleza natural com nossos produtos incríveis</h3> 
-    </header> 
-    <main> 
-        <div style="text-align: center;">
-            <img src="logo_maquiagem.png" alt="Logotipo da Glow & Style Beauty" class="logo">
-            <h2>Destaques da Semana</h2>
-        </div>
 
-        <section class="produtos">
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+            margin-bottom: 32px;
+        }
+
+        .footer-col h4 {
+            color: #F6F080;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-col ul li a {
+            color: #888888;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-col ul li a:hover {
+            color: #ffffff;
+        }
+
+        .copyright {
+            text-align: center;
+            font-size: 0.85rem;
+            border-top: 1px solid #222;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Vortex - Moda Unissex</h1>
+        <h3>Estilo sem rótulos. Caimento perfeito para todos os corpos.</h3>
+    </header>
+
+    <nav>
+        <a href="#lancamentos">Lançamentos</a>
+        <a href="#produtos">Coleção</a>
+        <a href="#conceito">Conceito</a>
+        <a href="#tabelas">Guia de Tamanhos</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <main>
+
+        <section class="hero" id="lancamentos">
+            <div class="hero-text">
+                <h2>Coleção Streetwear 2026</h2>
+                <p>Peças oversized, modelagens fluidas e tecidos sustentáveis projetados para se adaptar ao seu estilo único, sem restrição de gênero.</p>
+                <a href="#produtos" class="btn">Explorar Coleção</a>
+            </div>
+            <img src="padaria_imagem.png" alt="Logotipo da Loja Vortex Moda Unissex" class="hero-img">
+        </section>
+
+        <h2 class="section-title" id="produtos">Nossas Peças</h2>
+        <section class="grid-produtos">
+            
             <div class="card-produto">
-                <img src="batom.png" alt="Batom Matte Red">
-                <h4>Batom Matte</h4>
-                <p>R$ 29,90</p>
-                <button>Comprar</button>
+                <img src="padaria_imagem.png" alt="Camiseta Oversized Minimalista">
+                <h4>Camiseta Oversized Minimal</h4>
+                <p>Algodão 100% orgânico com corte reto e ombros caídos.</p>
+                <div class="preco">R$ 119,90</div>
+                <a href="#" class="btn">Comprar</a>
             </div>
 
             <div class="card-produto">
-                <img src="base.png" alt="Base Líquida Glow">
-                <h4>Base Líquida</h4>
-                <p>R$ 59,90</p>
-                <button>Comprar</button>
+                <img src="padaria_imagem.png" alt="Moletom Hoodie Agênero">
+                <h4>Hoodie Confort Unissex</h4>
+                <p>Interior flanelado, bolso canguru e capuz estruturado.</p>
+                <div class="preco">R$ 249,90</div>
+                <a href="#" class="btn">Comprar</a>
             </div>
 
             <div class="card-produto">
-                <img src="paleta.png" alt="Paleta de Sombras">
-                <h4>Paleta de Sombras</h4>
-                <p>R$ 79,90</p>
-                <button>Comprar</button>
+                <img src="padaria_imagem.png" alt="Calça Jogger Utilitária">
+                <h4>Calça Jogger Cargo</h4>
+                <p>Cós elástico com cordão ajustável e bolsos laterais funcionais.</p>
+                <div class="preco">R$ 189,90</div>
+                <a href="#" class="btn">Comprar</a>
+            </div>
+
+            <div class="card-produto">
+                <img src="padaria_imagem.png" alt="Jaqueta Jeans Genderless">
+                <h4>Jaqueta Jeans Vintage</h4>
+                <p>Lavagem média, botões reforçados e modelagem neutra.</p>
+                <div class="preco">R$ 319,90</div>
+                <a href="#" class="btn">Comprar</a>
+            </div>
+
+            <div class="card-produto">
+                <img src="padaria_imagem.png" alt="Bermuda Moletom Básica">
+                <h4>Bermuda Moletom Essential</h4>
+                <p>Leveza e conforto para o dia a dia, com toque aveludado.</p>
+                <div class="preco">R$ 99,90</div>
+                <a href="#" class="btn">Comprar</a>
+            </div>
+
+            <div class="card-produto">
+                <img src="padaria_imagem.png" alt="Regata Canelada Neutra">
+                <h4>Regata Canelada Urban</h4>
+                <p>Tecido flexível com elastano que se ajusta com leveza.</p>
+                <div class="preco">R$ 79,90</div>
+                <a href="#" class="btn">Comprar</a>
+            </div>
+
+        </section>
+
+        <h2 class="section-title" id="conceito">Moda Sem Fronteiras</h2>
+        <section class="info-box">
+            <h3>Por que escolher a moda agênero?</h3>
+            <p>Acreditamos que as roupas devem servir à sua expressão pessoal, e não a regras pré-estabelecidas. Nossas peças são desenhadas com base nas proporções do corpo e priorizam o conforto, a durabilidade e a versatilidade.</p>
+            
+            <h3 id="tabelas" style="margin-top: 20px;">Guia Universal de Tamanhos:</h3>
+            <p>Trabalhamos com uma grade ampla para atender a diferentes biotipos:</p>
+            <div class="tamanhos-list">
+                <span class="tamanho-badge">PP</span>
+                <span class="tamanho-badge">P</span>
+                <span class="tamanho-badge">M</span>
+                <span class="tamanho-badge">G</span>
+                <span class="tamanho-badge">GG</span>
+                <span class="tamanho-badge">XG</span>
             </div>
         </section>
-    </main> 
-</body> 
+
+    </main>
+
+    <footer id="contato">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>Vortex Moda</h4>
+                <p>Roupas autênticas para mentes livres. Entregamos para todo o Brasil com frete neutro em carbono.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Links Úteis</h4>
+                <ul>
+                    <li><a href="#">Política de Troca</a></li>
+                    <li><a href="#">Envio e Prazos</a></li>
+                    <li><a href="#">Sustentabilidade</a></li>
+                    <li><a href="#">Trabalhe Conosco</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Atendimento</h4>
+                <ul>
+                    <li>Email: contato@vortexmoda.com.br</li>
+                    <li>WhatsApp: (11) 99999-8888</li>
+                    <li>Horário: Seg. a Sex. das 9h às 18h</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 Vortex - Moda Unissex. Todos os direitos reservados.
+        </div>
+    </footer>
+
+</body>
 </html>
