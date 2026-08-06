@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Vortex - Roupas Unisex</title>
+        <title>Criado por Mariane - Acessórios & Bijuterias</title>
         <style>
             * {
                 box-sizing: border-box;
@@ -13,30 +13,32 @@
             }
 
             body {
-                background-color: #0f172a;
-                color: #FFFFFF;
-                background: linear-gradient(to right, #0f172a 50%, #1e293b 50%);
+                background-color: #FAF5F3;
+                color: #4A3E3D;
+                background: linear-gradient(to right, #FAF5F3 50%, #F3EAE8 50%);
             }
 
             /* Cabeçalho */
             header {
-                background: linear-gradient(to right, #6366f1, #4f46e5);
+                background: linear-gradient(to right, #E8A598, #C87D70);
                 color: #FFFFFF;
                 text-align: center;
-                padding: 24px 16px;
-                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+                padding: 28px 16px;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
             }
 
             header h1 {
-                font-size: 2.5rem;
+                font-size: 2.6rem;
                 letter-spacing: 3px;
                 text-transform: uppercase;
                 margin-bottom: 8px;
+                font-weight: 300;
             }
 
             header h3 {
                 font-size: 1.1rem;
                 font-weight: 300;
+                letter-spacing: 1px;
             }
 
             /* Conteúdo Principal */
@@ -52,40 +54,44 @@
                 align-items: center;
                 gap: 16px;
                 margin-bottom: 24px;
-                background-color: rgba(255, 255, 255, 0.05);
-                padding: 16px;
-                border-radius: 8px;
+                background-color: #FFFFFF;
+                padding: 20px;
+                border-radius: 12px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             }
 
             .loja-banner img {
-                width: 80px;
-                height: 80px;
+                width: 85px;
+                height: 85px;
                 border-radius: 50%;
                 object-fit: cover;
-                border: 2px solid #818cf8;
+                border: 2px solid #D4AF37;
             }
 
             h2 {
-                color: #818cf8;
-                margin-bottom: 8px;
+                color: #B25345;
+                margin-bottom: 4px;
             }
 
             .subtitulo {
-                color: #D1D5DB;
-                font-size: 0.9rem;
+                color: #8C7A78;
+                font-size: 0.95rem;
+                font-style: italic;
             }
 
             p {
                 line-height: 1.6;
                 font-size: 1rem;
                 margin-bottom: 12px;
+                color: #5A4B49;
             }
 
             .secao-titulo {
                 margin: 30px 0 15px 0;
                 font-size: 1.5rem;
-                border-left: 4px solid #818cf8;
-                padding-left: 10px;
+                border-left: 4px solid #D4AF37;
+                padding-left: 12px;
+                color: #3B2F2E;
             }
 
             /* Catálogo / Vitrine de Produtos */
@@ -97,59 +103,62 @@
             }
 
             .card-produto {
-                background-color: #1e293b;
-                border: 1px solid #334155;
-                border-radius: 8px;
+                background-color: #FFFFFF;
+                border: 1px solid #EAE0DD;
+                border-radius: 12px;
                 width: calc(33.33% - 14px);
-                padding: 15px;
+                padding: 16px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
-                transition: transform 0.2s ease, box-shadow 0.2s ease;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
             }
 
             .card-produto:hover {
                 transform: translateY(-5px);
-                box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.6);
+                box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
             }
 
             .card-produto img {
                 width: 100%;
                 height: 220px;
                 object-fit: cover;
-                border-radius: 4px;
+                border-radius: 8px;
                 margin-bottom: 12px;
             }
 
             .card-produto h4 {
                 font-size: 1.1rem;
                 margin-bottom: 4px;
+                color: #3B2F2E;
             }
 
             .card-produto .categoria-produto {
                 font-size: 0.85rem;
-                color: #9CA3AF;
+                color: #9E8C8A;
                 margin-bottom: 10px;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
             }
 
             .card-produto .preco {
-                font-size: 1.2rem;
+                font-size: 1.25rem;
                 font-weight: bold;
-                color: #34d399;
+                color: #B25345;
                 margin-bottom: 12px;
             }
 
             .btn-comprar {
-                background: linear-gradient(to right, #6366f1, #4f46e5);
+                background: linear-gradient(to right, #E8A598, #C87D70);
                 color: #FFFFFF;
                 border: none;
-                padding: 10px 16px;
-                border-radius: 4px;
+                padding: 12px 16px;
+                border-radius: 6px;
                 font-weight: bold;
                 cursor: pointer;
                 width: 100%;
-                transition: opacity 0.2s ease;
+                transition: background 0.3s ease, opacity 0.2s ease;
             }
 
             .btn-comprar:hover {
@@ -167,77 +176,80 @@
                 .card-produto {
                     width: 100%;
                 }
+                
+                body {
+                    background: #FAF5F3;
+                }
             }
         </style>
     </head>
     <body>
         <header>
-            <h1>Vortex</h1>
-            <h3>Moda Unissex e Atemporal a um clique de você!</h3>
+            <h1>Criado por Mariane</h1>
+            <h3>Bijuterias artesanais, delicadeza e estilo feito à mão para você!</h3>
         </header>
 
         <main>
             <div class="loja-banner">
-                <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=150" alt="Logotipo da Vortex Roupas">
+                <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=150" alt="Logotipo Criado por Mariane">
                 <div>
-                    <h2>Bem-vindo à Vortex</h2>
-                    <p class="subtitulo">Curadoria especial por: Mariane</p>
+                    <h2>Bem-vinda à Criado por Mariane</h2>
+                    <p class="subtitulo">Peças exclusivas feitas com amor e carinho por: Mariane</p>
                 </div>
             </div>
 
             <p>
-                Descubra nossa coleção de roupas unissex pensada para todos os estilos. Peças confortáveis,
-                modernas e versáteis para renovar o seu guarda-roupa. Faça seu pedido online e receba com conforto em casa!
+                Explore nossa coleção de bijuterias exclusivas! Trabalhamos com colares, brincos, pulseiras e anéis cuidadosamente desenhados para realçar a sua beleza no dia a dia ou em ocasiões especiais.
             </p>
 
-            <h3 class="secao-titulo">Destaques da Coleção</h3>
+            <h3 class="secao-titulo">Lançamentos & Destaques</h3>
 
             <div class="catalogo">
                 <div class="card-produto">
-                    <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=500" alt="Camiseta Oversized Básica">
-                    <h4>Camiseta Oversized Pretas</h4>
-                    <span class="categoria-produto">Camisetas</span>
-                    <span class="preco">R$ 89,90</span>
+                    <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=500" alt="Colar Delicado Dourado">
+                    <h4>Colar Gravatinha Dourado</h4>
+                    <span class="categoria-produto">Colares</span>
+                    <span class="preco">R$ 39,90</span>
                     <button class="btn-comprar">Adicionar ao Carrinho</button>
                 </div>
 
                 <div class="card-produto">
-                    <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=500" alt="Moletom Hooded Minimalista">
-                    <h4>Moletom Canguru Premium</h4>
-                    <span class="categoria-produto">Casacos & Moletons</span>
-                    <span class="preco">R$ 199,90</span>
+                    <img src="https://images.unsplash.com/photo-1630019852942-f89202989a59?w=500" alt="Brinco de Argola com Pérolas">
+                    <h4>Brinco Argola Pérolas</h4>
+                    <span class="categoria-produto">Brincos</span>
+                    <span class="preco">R$ 29,90</span>
                     <button class="btn-comprar">Adicionar ao Carrinho</button>
                 </div>
 
                 <div class="card-produto">
-                    <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=500" alt="Calça Jeans Straight Fit">
-                    <h4>Calça Jeans Straight Unisex</h4>
-                    <span class="categoria-produto">Calças</span>
-                    <span class="preco">R$ 159,90</span>
+                    <img src="https://images.unsplash.com/photo-1611591475140-4388cf127b87?w=500" alt="Conjunto de Pulseiras">
+                    <h4>Kit Pulseiras Mix Miçangas</h4>
+                    <span class="categoria-produto">Pulseiras</span>
+                    <span class="preco">R$ 34,90</span>
                     <button class="btn-comprar">Adicionar ao Carrinho</button>
                 </div>
 
                 <div class="card-produto">
-                    <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=500" alt="Jqueta Jeans Oversized">
-                    <h4>Jaqueta Jeans Vintage</h4>
-                    <span class="categoria-produto">Casacos</span>
-                    <span class="preco">R$ 249,90</span>
+                    <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=500" alt="Anel Solitário Ajustável">
+                    <h4>Anel Ajustável Cristais</h4>
+                    <span class="categoria-produto">Anéis</span>
+                    <span class="preco">R$ 24,90</span>
                     <button class="btn-comprar">Adicionar ao Carrinho</button>
                 </div>
 
                 <div class="card-produto">
-                    <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=500" alt="Calça Jogger Streetwear">
-                    <h4>Calça Jogger Confort</h4>
-                    <span class="categoria-produto">Calças</span>
-                    <span class="preco">R$ 129,90</span>
+                    <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=500" alt="Choker Folheada">
+                    <h4>Choker Escama de Peixe</h4>
+                    <span class="categoria-produto">Colares</span>
+                    <span class="preco">R$ 42,90</span>
                     <button class="btn-comprar">Adicionar ao Carrinho</button>
                 </div>
 
                 <div class="card-produto">
-                    <img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=500" alt="Boné Streetwear">
-                    <h4>Boné Strapback Vortex</h4>
-                    <span class="categoria-produto">Acessórios</span>
-                    <span class="preco">R$ 69,90</span>
+                    <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=500" alt="Ear Cuff Botânico">
+                    <h4>Brinco Ear Cuff Folhas</h4>
+                    <span class="categoria-produto">Brincos</span>
+                    <span class="preco">R$ 27,90</span>
                     <button class="btn-comprar">Adicionar ao Carrinho</button>
                 </div>
             </div>
