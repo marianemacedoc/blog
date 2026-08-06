@@ -3,42 +3,46 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> Divina Biju - Acessórios & Bijuterias</title>
+        <title>SNKR & CO. - Urban Sneakers & Streetwear</title>
         <style>
             * {
                 box-sizing: border-box;
                 margin: 0;
                 padding: 0;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
             }
 
             body {
-                background-color: #FAF5F3;
-                color: #4A3E3D;
-                background: linear-gradient(to right, #FAF5F3 50%, #F3EAE8 50%);
+                background-color: #0F0F11;
+                color: #F3F4F6;
+                background: linear-gradient(to right, #0F0F11 50%, #18181B 50%);
             }
 
             /* Cabeçalho */
             header {
-                background: linear-gradient(to right, #E8A598, #C87D70);
+                background: linear-gradient(to right, #18181B, #27272A);
                 color: #FFFFFF;
                 text-align: center;
                 padding: 28px 16px;
-                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+                border-bottom: 2px solid #CCFF00;
+                box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
             }
 
             header h1 {
-                font-size: 2.6rem;
-                letter-spacing: 3px;
+                font-size: 2.8rem;
+                letter-spacing: 4px;
                 text-transform: uppercase;
-                margin-bottom: 8px;
-                font-weight: 300;
+                margin-bottom: 6px;
+                font-weight: 900;
+                color: #FFFFFF;
             }
 
             header h3 {
-                font-size: 1.1rem;
-                font-weight: 300;
-                letter-spacing: 1px;
+                font-size: 1rem;
+                font-weight: 400;
+                letter-spacing: 1.5px;
+                color: #A1A1AA;
+                text-transform: uppercase;
             }
 
             /* Conteúdo Principal */
@@ -54,44 +58,47 @@
                 align-items: center;
                 gap: 16px;
                 margin-bottom: 24px;
-                background-color: #FFFFFF;
+                background-color: #18181B;
                 padding: 20px;
                 border-radius: 12px;
-                box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+                border: 1px solid #27272A;
             }
 
             .loja-banner img {
-                width: 85px;
-                height: 85px;
+                width: 80px;
+                height: 80px;
                 border-radius: 50%;
                 object-fit: cover;
-                border: 2px solid #D4AF37;
+                border: 2px solid #CCFF00;
             }
 
             h2 {
-                color: #B25345;
+                color: #CCFF00;
                 margin-bottom: 4px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
             }
 
             .subtitulo {
-                color: #8C7A78;
-                font-size: 0.95rem;
-                font-style: italic;
+                color: #A1A1AA;
+                font-size: 0.9rem;
+                letter-spacing: 0.5px;
             }
 
             p {
                 line-height: 1.6;
                 font-size: 1rem;
                 margin-bottom: 12px;
-                color: #5A4B49;
+                color: #D4D4D8;
             }
 
             .secao-titulo {
                 margin: 30px 0 15px 0;
-                font-size: 1.5rem;
-                border-left: 4px solid #D4AF37;
+                font-size: 1.4rem;
+                border-left: 4px solid #CCFF00;
                 padding-left: 12px;
-                color: #3B2F2E;
+                text-transform: uppercase;
+                letter-spacing: 1px;
             }
 
             /* Catálogo / Vitrine de Produtos */
@@ -103,8 +110,8 @@
             }
 
             .card-produto {
-                background-color: #FFFFFF;
-                border: 1px solid #EAE0DD;
+                background-color: #18181B;
+                border: 1px solid #27272A;
                 border-radius: 12px;
                 width: calc(33.33% - 14px);
                 padding: 16px;
@@ -112,12 +119,13 @@
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                transition: transform 0.25 ease, border-color 0.25s ease, box-shadow 0.25s ease;
             }
 
             .card-produto:hover {
-                transform: translateY(-5px);
-                box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+                transform: translateY(-6px);
+                border-color: #CCFF00;
+                box-shadow: 0px 8px 20px rgba(204, 255, 0, 0.15);
             }
 
             .card-produto img {
@@ -125,44 +133,47 @@
                 height: 220px;
                 object-fit: cover;
                 border-radius: 8px;
-                margin-bottom: 12px;
+                margin-bottom: 14px;
             }
 
             .card-produto h4 {
-                font-size: 1.1rem;
-                margin-bottom: 4px;
-                color: #3B2F2E;
+                font-size: 1.05rem;
+                margin-bottom: 6px;
+                color: #FFFFFF;
+                font-weight: 700;
             }
 
             .card-produto .categoria-produto {
-                font-size: 0.85rem;
-                color: #9E8C8A;
-                margin-bottom: 10px;
+                font-size: 0.8rem;
+                color: #71717A;
+                margin-bottom: 12px;
                 text-transform: uppercase;
-                letter-spacing: 0.5px;
+                letter-spacing: 1px;
             }
 
             .card-produto .preco {
-                font-size: 1.25rem;
-                font-weight: bold;
-                color: #B25345;
-                margin-bottom: 12px;
+                font-size: 1.3rem;
+                font-weight: 800;
+                color: #FFFFFF;
+                margin-bottom: 14px;
             }
 
             .btn-comprar {
-                background: linear-gradient(to right, #E8A598, #C87D70);
-                color: #FFFFFF;
+                background-color: #CCFF00;
+                color: #000000;
                 border: none;
                 padding: 12px 16px;
                 border-radius: 6px;
-                font-weight: bold;
+                font-weight: 800;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
                 cursor: pointer;
                 width: 100%;
-                transition: background 0.3s ease, opacity 0.2s ease;
+                transition: background-color 0.2s ease, transform 0.1s ease;
             }
 
             .btn-comprar:hover {
-                opacity: 0.9;
+                background-color: #e6ff66;
             }
 
             /* Responsividade para celulares */
@@ -176,81 +187,81 @@
                 .card-produto {
                     width: 100%;
                 }
-                
+
                 body {
-                    background: #FAF5F3;
+                    background: #0F0F11;
                 }
             }
         </style>
     </head>
     <body>
         <header>
-            <h1>Criado por Mariane</h1>
-            <h3>Bijuterias artesanais, delicadeza e estilo feito à mão para você!</h3>
+            <h1>SNKR & CO.</h1>
+            <h3>O Drop perfeito para o seu estilo urban & unisex</h3>
         </header>
 
         <main>
             <div class="loja-banner">
-                <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=150" alt="Logotipo Criado por Mariane">
+                <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?w=150" alt="Logotipo SNKR & CO.">
                 <div>
-                    <h2>Bem-vinda à Criado por Mariane</h2>
-                    <p class="subtitulo">Peças exclusivas feitas com amor e carinho por: Mariane</p>
+                    <h2>Bem-vindo à SNKR & CO.</h2>
+                    <p class="subtitulo">Curadoria de estilo criada por: Mariane</p>
                 </div>
             </div>
 
             <p>
-                Explore nossa coleção de bijuterias exclusivas! Trabalhamos com colares, brincos, pulseiras e anéis cuidadosamente desenhados para realçar a sua beleza no dia a dia ou em ocasiões especiais.
+                Encontre os modelos mais desejados da cultura street. Tênis unissex com design moderno, máximo conforto e atitude para compor qualquer look do seu dia a dia.
             </p>
 
-            <h3 class="secao-titulo">Lançamentos & Destaques</h3>
+            <h3 class="secao-titulo">Drops & Lançamentos</h3>
 
             <div class="catalogo">
                 <div class="card-produto">
-                    <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=500" alt="Colar Delicado Dourado">
-                    <h4>Colar Gravatinha Dourado</h4>
-                    <span class="categoria-produto">Colares</span>
-                    <span class="preco">R$ 39,90</span>
-                    <button class="btn-comprar">Adicionar ao Carrinho</button>
+                    <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=500" alt="Tênis Streetwear Branco e Vermelho">
+                    <h4>SNKR Runner Retro</h4>
+                    <span class="categoria-produto">Unissex • Casual</span>
+                    <span class="preco">R$ 389,90</span>
+                    <button class="btn-comprar">Garantir o Seu</button>
                 </div>
 
                 <div class="card-produto">
-                    <img src="https://images.unsplash.com/photo-1630019852942-f89202989a59?w=500" alt="Brinco de Argola com Pérolas">
-                    <h4>Brinco Argola Pérolas</h4>
-                    <span class="categoria-produto">Brincos</span>
-                    <span class="preco">R$ 29,90</span>
-                    <button class="btn-comprar">Adicionar ao Carrinho</button>
+                    <img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=500" alt="Tênis Preto Urbano">
+                    <h4>Urban Black Matrix</h4>
+                    <span class="categoria-produto">Unissex • Streetwear</span>
+                    <span class="preco">R$ 429,90</span>
+                    <button class="btn-comprar">Garantir o Seu</button>
                 </div>
 
                 <div class="card-produto">
-                    <img src="https://images.unsplash.com/photo-1611591475140-4388cf127b87?w=500" alt="Conjunto de Pulseiras">
-                    <h4>Kit Pulseiras Mix Miçangas</h4>
-                    <span class="categoria-produto">Pulseiras</span>
-                    <span class="preco">R$ 34,90</span>
-                    <button class="btn-comprar">Adicionar ao Carrinho</button>
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500" alt="Tênis Esportivo Vermelho">
+                    <h4>Hyper Speed Red</h4>
+                    <span class="categoria-produto">Unissex • Esportivo</span>
+                    <span class="preco">R$ 499,90</span>
+                    <button class="btn-comprar">Garantir o Seu</button>
                 </div>
 
                 <div class="card-produto">
-                    <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=500" alt="Anel Solitário Ajustável">
-                    <h4>Anel Ajustável Cristais</h4>
-                    <span class="categoria-produto">Anéis</span>
-                    <span class="preco">R$ 24,90</span>
-                    <button class="btn-comprar">Adicionar ao Carrinho</button>
+                    <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=500" alt="Tênis Off-White Minimalista">
+                    <h4>Minimalist Off-White</h4>
+                    <span class="categoria-produto">Unissex • Classics</span>
+                    <span class="preco">R$ 359,90</span>
+                    <button class="btn-comprar">Garantir o Seu</button>
                 </div>
 
                 <div class="card-produto">
-                    <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=500" alt="Choker Folheada">
-                    <h4>Choker Escama de Peixe</h4>
-                    <span class="categoria-produto">Colares</span>
-                    <span class="preco">R$ 42,90</span>
-                    <button class="btn-comprar">Adicionar ao Carrinho</button>
+                    <img src="https://images.unsplash.com/photo-1539185441755-769473a23570?w=500" alt="Tênis Estilo Skate Chunky">
+                    <h4>Chunky Skate 90s</h4>
+                    <span class="categoria-produto">Unissex • Vintage</span>
+                    <span class="preco">R$ 449,90</span>
+                    <button class="btn-comprar">Garantir o Seu</button>
                 </div>
 
                 <div class="card-produto">
-                    <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=500" alt="Ear Cuff Botânico">
-                    <h4>Brinco Ear Cuff Folhas</h4>
-                    <span class="categoria-produto">Brincos</span>
-                    <span class="preco">R$ 27,90</span>
-                    <button class="btn-comprar">Adicionar ao Carrinho</button>
+                    <img src="https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=500" alt="Tênis Cano Alto">
+                    <h4>High Top Legend</h4>
+                    <span class="categoria-produto">Unissex • Cano Alto</span>
+                    <span class="preco">R$ 479,90</span>
+                    <button class="btn-comprar">Garantir o Seu</button>
                 </div>
             </div>
         </main>
